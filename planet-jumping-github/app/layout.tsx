@@ -3,8 +3,8 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Planet Jumping',
-  description: 'An immersive space portal experience: step through a canvas-driven 3D window and travel from planet to planet.',
-  openGraph: { title: 'Planet Jumping', description: 'An immersive space portal experience built with Next.js and canvas.', type: 'website' },
+  description: 'Fly through the solar system: all eight planets, drawn live in your browser, with the key facts for each.',
+  openGraph: { title: 'Planet Jumping', description: 'Fly through all eight planets of the solar system.', type: 'website' },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

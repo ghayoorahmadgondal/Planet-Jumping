@@ -1,5 +1,5 @@
-import PlanetJumping from '@/components/PlanetJumping';
+import SolarSystem from '@/components/SolarSystem';
 
 export default function Page() {
-  return <PlanetJumping />;
+  return <SolarSystem />;
 }
