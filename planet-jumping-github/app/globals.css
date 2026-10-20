@@ -116,3 +116,14 @@ body:not(.intro-ready) .header,body:not(.intro-ready) .planet-list,body:not(.int
 .menu{height:38px}
 .portal{border-radius:70px}}
 @media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}.portal{transform:none!important}}
+
+.planet-content{pointer-events:none}
+.overlay{position:absolute;inset:0;z-index:30;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(0,0,0,.6);backdrop-filter:blur(14px)}
+.overlay-card{position:relative;width:min(560px,100%);max-height:100%;overflow:auto;padding:64px 32px 32px;border:1px solid rgba(255,255,255,.45);border-radius:28px;background:rgba(20,18,16,.78)}
+.overlay-card h2{margin:0 0 8px;font-size:20px}
+.overlay-card p{margin:0 0 20px;line-height:1.5}
+.overlay-card ul{margin:0 0 20px;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.overlay-card li.on{font-weight:700}
+.overlay-close,.overlay-restart{height:42px;padding:0 20px;border:0;border-radius:999px;background:#fff;color:#000}
+.overlay-close{position:absolute;top:16px;right:16px}
+.overlay-restart{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.45)}

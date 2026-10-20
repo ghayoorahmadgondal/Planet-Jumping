@@ -158,6 +158,7 @@ export function initExperience(root: HTMLElement, api: Api) {
       pvid.play().catch(finish);
       (function tick() { if (done || dead) return; val.textContent = String(Math.min(100, Math.round((pvid.currentTime / pvid.duration) * 100) || 0)); r2 = requestAnimationFrame(tick); })();
     };
+    setTimeout(finish, 12000);
     pvid.addEventListener('ended', finish); pvid.addEventListener('error', finish);
     pvid.readyState >= 1 ? go() : pvid.addEventListener('loadedmetadata', go, { once: true });
   }
@@ -183,6 +184,7 @@ export function initExperience(root: HTMLElement, api: Api) {
     r3 = requestAnimationFrame(cursorLoop);
   };
 
+  root.querySelectorAll('video').forEach((v) => { v.muted = true; });
   root.querySelectorAll<HTMLVideoElement>('.background').forEach((v) => { v.pause(); v.currentTime = 0; });
   resizeCanvas();
   r1 = requestAnimationFrame(draw); r3 = requestAnimationFrame(cursorLoop); runPreloader();
